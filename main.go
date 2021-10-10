@@ -1,7 +1,15 @@
 package main
 
-import "fmt"
+import "listingQuery/Routes"
 
 func main(){
-	fmt.Println("This is the fastest query!!!!")
+
+	r := Routes.SetupRoutes()
+
+	err := r.Run()
+
+	if err != nil {
+		return
+	}
 }
+
